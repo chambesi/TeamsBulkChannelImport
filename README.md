@@ -27,7 +27,9 @@ What to change in the 2nd row:
 
 TeamsName: Name of the team that you're adding the channels to
 
-TeamType: Public or Private. You'll use only one or the other or you'll have an error
+TeamType: Standard, Private, or Shared are the only options. You must pick one of the three.
+
+Be aware that Microsoft Teams only allows for 30 private channels and that once you have met that threshold, you will not be able to create new private channels until 30 days after private channels have been deleted.
 
 ChannelName: Name of the channels you're creating
 
