@@ -84,7 +84,7 @@ Write-Host "User $Email has been added to $Channel successfully." -ForegroundCol
 }
 
 #when everything imports successfully
-#If an error mentions the channel name being taken, that means it's still in Azure's database
+#If an error mentions the channel name being taken, that means it's still in Azure's database or the script tried to create the channel that you're adding a 2nd user to even though the channel was already created.
 #It would also have to be deleted there in order for the channel name to be reused.
 
 #The below statement tells me that the script completed. It will print regardless of error.
