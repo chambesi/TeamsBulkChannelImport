@@ -31,6 +31,8 @@ TeamType: Standard, Private, or Shared are the only options. You must pick one o
 
 Be aware that Microsoft Teams only allows for 30 private channels and that once you have met that threshold, you will not be able to create new private channels until 30 days after private channels have been deleted.
 
+Standard Channels cannot have owners. Shared Channels can be shared outside of the organization.
+
 ChannelName: Name of the channels you're creating
 
 Owners: Whoever will own/oversee the channel
