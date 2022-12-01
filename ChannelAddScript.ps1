@@ -30,6 +30,7 @@ else{
 
 #connects to log in splash only when the module is either found or installed.
 Connect-MicrosoftTeams
+Write-Host "Teams Module connected."
 Write-Host "Opening File Explorer to import CSV file..."
 
 #Select-File function is how the File Explorer opens up so that you can choose the file.
@@ -88,13 +89,3 @@ Write-Host "Users have been imported." -ForegroundColor Cyan
 
 #The below statement tells me that the script completed. It will print regardless of error.
 Write-Host "CSV file import process complete." -ForegroundColor Green
-
-#Displays name of channels that were created successfully
-Write-Host "The following channels were created:"
-$ChannelsCreated = Get-TeamChannel -GroupID $TeamID | Select -expand DisplayName
-Write-Host $ChannelsCreated
-
-#Displays names of users (members, not owners) in last name, first name format
-Write-Host "The following users were added:"
-$UsersAdded = Get-TeamChannelUser -GroupID $TeamID -DisplayName $Channel -Role Member | Select -Expand Name
-Write-Host $UsersAdded
