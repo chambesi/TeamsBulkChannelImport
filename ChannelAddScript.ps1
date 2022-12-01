@@ -88,3 +88,10 @@ Write-Host "Users have been imported." -ForegroundColor Cyan
 
 #The below statement tells me that the script completed. It will print regardless of error.
 Write-Host "CSV file import process complete." -ForegroundColor Green
+
+Write-Host "The following channels were created:"
+$ChannelsCreated = Get-TeamChannel -GroupID $TeamID | Select -expand DisplayName
+Write-Host $ChannelsCreated
+Write-Host "The following users were added:"
+$UsersAdded = Get-TeamChannelUser -GroupID $TeamID -DisplayName $Channel -Role Member | Select -Expand Name
+Write-Host $UsersAdded
