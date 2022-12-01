@@ -55,7 +55,8 @@ $path = Select-File
 Write-Host "Importing CSV file now. This may take some time. Please wait... "
 $csv = Import-Csv $path
 
-#Previous version: $csv = Import-Csv 'C:\foldername\nameoffile.csv' - If Select-File isn't working, then the Import-Csv command with the file location replaced in those quotes will work.
+#Previous version: $csv = Import-Csv 'C:\foldername\nameoffile.csv' - If Select-File isn't working
+#then the Import-Csv command with the file location replaced in those quotes will work.
 ##idea: call command to load the "choose file" window so that user doesn't need to copy/paste filepath and then store file path as variable.
 
 ForEach ($Class in $csv){
@@ -67,7 +68,9 @@ $Email = $class.Members
 
 
 $TeamID = Get-Team -DisplayName $TeamName| Select -expand GroupID
-Write-Host "Adding Channels to $TeamID... Please wait." #this was just for my reference to make sure I had pulled the GroupID for the team in the CSV file.
+Write-Host "Retrieved $TeamName with GroupID $TeamID"
+#this was just for my reference to make sure I had pulled the GroupID for the team in the CSV file.
+Write-Host "Adding Channels to $TeamName... Please wait." 
 #TeamsName, TeamType, ChannelName, Owners, and Members are the column headers in the CSV file.
 
 #Creating the channels
@@ -84,7 +87,8 @@ Write-Host "User $Email has been added to $Channel successfully." -ForegroundCol
 }
 
 #when everything imports successfully
-#If an error mentions the channel name being taken, that means it's still in Azure's database or the script tried to create the channel that you're adding a 2nd user to even though the channel was already created.
+#If an error mentions the channel name being taken, that means it's still in Azure's database
+#Or the script tried to create the channel that you're adding a 2nd user to even though the channel was already created.
 #It would also have to be deleted there in order for the channel name to be reused.
 
 #The below statement tells me that the script completed. It will print regardless of error.
