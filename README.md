@@ -1,4 +1,4 @@
-# TeamsBulkChannelImport
+# Teams Bulk Channel Import
 
 The purpose of this script is to be able to upload Teams Channels in bulk with the use of a CSV file. It saves time when you're trying to make a bunch of channels and add a lot of users to all the channels you made.
 
@@ -30,8 +30,6 @@ TeamsName: Name of the team that you're adding the channels to
 TeamType: Standard, Private, or Shared are the only options. You must pick one of the three.
 
 Be aware that Microsoft Teams only allows for 30 private channels and that once you have met that threshold, you will not be able to create new private channels until 30 days after private channels have been deleted.
-
-Standard Channels cannot have owners. Shared Channels can be shared outside of the organization.
 
 ChannelName: Name of the channels you're creating
 
