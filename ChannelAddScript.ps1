@@ -5,9 +5,8 @@ Write-Host "Checking for the Teams PowerShell Module. Please wait..."
 $command = Get-Module -ListAvailable -Name MicrosoftTeams
 
 if($command){
-Write-Host "Teams PowerShell Module was found. Connecting to Microsoft Teams now."
-}
-
+	Write-Host "Teams PowerShell Module was found. Connecting to Microsoft Teams now."
+	}
  
 else{
 	Write-Host "Teams PowerShell Module is not installed on this system and is required before proceeding."
