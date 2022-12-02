@@ -43,6 +43,6 @@ Owners: Whoever will own/oversee the channel
 
 Members: You'll enter the email address of the channel user that you are adding. If you want to add multiple members to the same channel, just add a comma after the first member and add the email address immediately after so that it looks like this:
 
-<img width="607" alt="image" src="https://user-images.githubusercontent.com/70851634/205352865-3c69d7a3-aa3e-4717-a335-8be5d1eee545.png">
+<img width="610" alt="image" src="https://user-images.githubusercontent.com/70851634/205354286-c372e573-89d4-4325-a137-e6538119bddb.png">
 
 If you get an error from Azure Directory because the "channel name has been used", it's because you need to delete the channel directly from Azure. The error most likely occurs when you have used the channel name before and/or deleted it and it won't let you reuse them without deleting them in Azure's directory.
