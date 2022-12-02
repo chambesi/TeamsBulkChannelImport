@@ -1,4 +1,3 @@
 TeamsName,TeamType,ChannelName,Owners,Members
-Name of Team,Private,ChannelName,channelowner@email.com,channelmember@email.com
-Name of Team,Private,ChannelName,channelowner@email.com,channeluser2@email.com
+Name of Team,Private,ChannelName,channelowner@email.com,channelmember@email.com,channelmember2@mail.com
 Name of Team,Private,ChannelName2,channelowner@email.com,channeluser3@email.com
