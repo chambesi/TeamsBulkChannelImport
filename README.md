@@ -31,15 +31,9 @@ To format the CSV, you can use Notepad and change the names in the 2nd line, mak
 
 Be aware that Microsoft Teams only allows for 30 private channels and that once you have met that threshold, you will not be able to create new private channels until 30 days after private channels have been deleted.
 
-**For public channels, use this format for the CSV:**
-
-<img width="293" alt="image" src="https://user-images.githubusercontent.com/70851634/205353132-4a9926ff-f68f-4579-8ab9-5a2f3bbcf882.png">
-
-The script will detect that it is a Public channel and follow the correct lines to make the public channel.
-
 **ChannelName:** Name of the channels you're creating
 
-**Owners:** Whoever will own/oversee the channel
+**Owners:** Whoever will own/oversee the channel. Must be in email format.
 
 **Members:** You'll enter the email address of the channel user that you are adding. If you want to add multiple members to the same channel, just add a comma after the first member and add the email address immediately after so that it looks like this:
 
