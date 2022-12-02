@@ -70,30 +70,19 @@ $TeamID = Get-Team -DisplayName $TeamName| Select -expand GroupID
 #Write-Host $TeamID #this was just for my reference to make sure I had pulled the GroupID for the team in the CSV file.
 #TeamsName, TeamType, ChannelName, Owners, and Members are the column headers in the CSV file.
 
-if ($Membership = "Standard"){
-    Write-Host "Creating Public Channel named $Channel..."-ForegroundColor Cyan
-    New-TeamChannel -GroupID $TeamID -DisplayName $Channel -MembershipType $Membership
-    Write-Host "Channel $Channel has been imported successfully." -ForegroundColor Cyan 
+Write-Host "Creating Channel named $Channel..."-ForegroundColor Cyan 
 
-    #The TeamID is the id from the Team, not the Channel's group ID.
-    #need if statements to handle errors for teams you don't have permission to create channels in
-    #adds users from the CSV to the channel specified in the CSV. GroupID is the Team's ID, not channel's ID
-    }
+New-TeamChannel -GroupID $TeamID -DisplayName $Channel -Owner $ChannelOwnerName -MembershipType $Membership
+Write-Host "Channel $Channel has been imported successfully." -ForegroundColor Cyan 
 
-else {
-    Write-Host "Creating Private Channel named $Channel..."-ForegroundColor Cyan 
-
-    New-TeamChannel -GroupID $TeamID -DisplayName $Channel -Owner $ChannelOwnerName -MembershipType $Membership
-    Write-Host "Channel $Channel has been imported successfully." -ForegroundColor Cyan 
-
-    #The TeamID is the id from the Team, not the Channel's group ID.
-    #need if statements to handle errors for teams you don't have permission to create channels in
-    #adds users from the CSV to the channel specified in the CSV. GroupID is the Team's ID, not channel's ID
+#The TeamID is the id from the Team, not the Channel's group ID.
+#need if statements to handle errors for teams you don't have permission to create channels in
+#adds users from the CSV to the channel specified in the CSV. GroupID is the Team's ID, not channel's ID
     
-    Write-Host "Adding user $Email in Channel $Channel"
-    Add-TeamChannelUser -GroupID $TeamID -DisplayName $Channel -user $Email
-    Write-Host "User $Email has been imported successfully." -ForegroundColor Cyan
-    }
+Write-Host "Adding user $Email in Channel $Channel"
+Add-TeamChannelUser -GroupID $TeamID -DisplayName $Channel -user $Email
+Write-Host "User $Email has been imported successfully." -ForegroundColor Cyan
+    
 }
 
 #when everything imports successfully
