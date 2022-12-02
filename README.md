@@ -31,16 +31,18 @@ TeamType: Standard, Private, or Shared are the only options. You must pick one o
 
 Be aware that Microsoft Teams only allows for 30 private channels and that once you have met that threshold, you will not be able to create new private channels until 30 days after private channels have been deleted.
 
+For public channels, use this format for the CSV:
+
+<img width="293" alt="image" src="https://user-images.githubusercontent.com/70851634/205353132-4a9926ff-f68f-4579-8ab9-5a2f3bbcf882.png">
+
+The script will detect that it is a Public channel and follow the correct lines to make the public channel.
+
 ChannelName: Name of the channels you're creating
 
 Owners: Whoever will own/oversee the channel
 
-Members: You'll enter the email address of the channel user that you are adding.
+Members: You'll enter the email address of the channel user that you are adding. If you want to add multiple members to the same channel, just add a comma after the first member and add the email address immediately after so that it looks like this:
 
-
-For every user in the same row, you'll add another row so that it will look something like this:
-
-<img width="764" alt="image" src="https://user-images.githubusercontent.com/70851634/205088060-15e67f87-ad96-4bd6-8656-547d2d2757ae.png">
-
+<img width="607" alt="image" src="https://user-images.githubusercontent.com/70851634/205352865-3c69d7a3-aa3e-4717-a335-8be5d1eee545.png">
 
 If you get an error from Azure Directory because the "channel name has been used", it's because you need to delete the channel directly from Azure. The error most likely occurs when you have used the channel name before and/or deleted it and it won't let you reuse them without deleting them in Azure's directory.
