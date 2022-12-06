@@ -35,8 +35,6 @@ Be aware that Microsoft Teams only allows for 30 private channels and that once 
 
 **Owners:** Whoever will own/oversee the channel. Must be in email format.
 
-**Members:** You'll enter the email address of the channel user that you are adding. If you want to add multiple members to the same channel, just add a comma after the first member and add the email address immediately after so that it looks like this:
-
-<img width="610" alt="image" src="https://user-images.githubusercontent.com/70851634/205354286-c372e573-89d4-4325-a137-e6538119bddb.png">
+**Members:** You'll enter the email address of the channel user that you are adding. If you want to add multiple members to the same channel, just add a new row and follow the same format. An error will show that the channel name has already been used, but ignore it. It's not going to affect your import.
 
 If you get an error from Azure Directory because the "channel name has been used", it's because you need to delete the channel directly from Azure. The error most likely occurs when you have used the channel name before and/or deleted it and it won't let you reuse them without deleting them in Azure's directory.
